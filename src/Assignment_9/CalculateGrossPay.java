@@ -17,5 +17,34 @@ public class CalculateGrossPay
 
         double commissionRate=0.0;
 
-    }
+        if(sales>=0 &&sales < 10000)
+        {
+            commissionRate = 5.0;
+        }
+        else if(sales>=10000 && sales <= 14999)
+        {
+            commissionRate = 10.0;
+        }
+        else if(sales>=15000 && sales <= 17999)
+        {
+            commissionRate = 12.0;
+        }
+        else if(sales>=18000 && sales <= 21999)
+        {
+            commissionRate = 15.0;
+        }
+        else if(sales >=22000 )
+        {
+            commissionRate = 16.0;
+        }
+        else
+        {
+            System.out.println("Sales can't be negative. ");
+            System.exit(1);
+        }
+            double commission = commissionRate * sales / 100;
+            double grossPay = commission - advance;
+            System.out.println("Commission : $"+commission);
+
+        }
 }
