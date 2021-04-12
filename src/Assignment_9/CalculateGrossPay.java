@@ -55,7 +55,7 @@ public class CalculateGrossPay
             System.out.println("You are owning $"+(grossPay*-1)+" to the company.");
         }
         else{
-            System.out.println("You have $0 balance.");
+            System.out.println("You have $0 pay check.");
         }
     }
 }
