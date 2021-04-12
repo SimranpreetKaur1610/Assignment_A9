@@ -42,9 +42,20 @@ public class CalculateGrossPay
             System.out.println("Sales can't be negative. ");
             System.exit(1);
         }
-            double commission = commissionRate * sales / 100;
-            double grossPay = commission - advance;
-            System.out.println("Commission : $"+commission);
+        double commission = commissionRate * sales / 100;
+        double grossPay = commission - advance;
+        System.out.println("Commission : $"+commission);
 
+        if(grossPay > 0)
+        {
+            System.out.println("Gross Pay : $"+grossPay);
         }
+        else if(grossPay<0)
+        {
+            System.out.println("You are owning $"+(grossPay*-1)+" to the company.");
+        }
+        else{
+            System.out.println("You have $0 balance.");
+        }
+    }
 }
